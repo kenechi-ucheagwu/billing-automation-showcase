@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "billing-guard"
+dynamic = ["version"]
+description = "Guarded billing changes against a mock EHR: dry run, small first batch, verify every write, circuit breakers, human submit."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Kenechi Ucheagwu" }]
+dependencies = []
+keywords = ["healthcare", "billing", "ehr", "automation", "audit-log", "circuit-breaker"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Healthcare Industry",
+    "Programming Language :: Python :: 3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+billing-guard = "billing_guard.cli:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "billing_guard.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["billing_guard*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

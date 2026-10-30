@@ -1,5 +1,7 @@
 # billing-automation-showcase
 
+[![ci](https://github.com/kenechi-ucheagwu/billing-automation-showcase/actions/workflows/ci.yml/badge.svg)](https://github.com/kenechi-ucheagwu/billing-automation-showcase/actions/workflows/ci.yml)
+
 A guarded way to let a script make billing changes in an EHR: a dry run first, a small first batch, a check after every change, circuit breakers, and a final submit that stays with a person.
 
 Every patient, claim and ID in this repository is synthetic. The data is generated at runtime from a seed, and nothing here comes from a real practice.
@@ -145,6 +147,8 @@ Exit codes: 0 when the run is on track, 1 when it stopped, failed or was refused
 I run IT operations at a primary-care practice and write its billing automation in Python. I'm also a nursing student. This is a standalone version of the guard pattern I use there, written from scratch against a mock. None of the practice's code or data is in it.
 
 Its sibling repository, [phi-guardrails](https://github.com/kenechi-ucheagwu/phi-guardrails), keeps patient identifiers out of git history. This repository's CI runs that scanner over its own history.
+
+Author: Kenechi Ucheagwu. Write-up on [my site](https://kenechi-ucheagwu.github.io/projects/billing-automation-showcase/); also on [LinkedIn](https://www.linkedin.com/in/kenechi-ucheagwu).
 
 ## What's next
 

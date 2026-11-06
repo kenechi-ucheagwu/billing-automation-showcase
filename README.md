@@ -144,7 +144,7 @@ Exit codes: 0 when the run is on track, 1 when it stopped, failed or was refused
 
 ## Where it came from
 
-I run IT and billing for a family-medicine practice and build its billing tools in Python. I'm also in nursing school. This is a standalone version of the guard pattern I use there, written from scratch against a mock. None of the practice's code or data is in it.
+I run IT and billing for a family-medicine practice and build its billing tools in Python. I'm also in nursing school. I wrote this demo from scratch against a mock. None of the practice's code or data is in it.
 
 Its sibling repository, [phi-guardrails](https://github.com/kenechi-ucheagwu/phi-guardrails), keeps patient identifiers out of git history. This repository's CI runs that scanner over its own history.
 
